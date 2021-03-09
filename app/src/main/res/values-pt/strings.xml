@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AFProject</string>
+    <string name="welcome">Bem-vindo à app</string>
+    <string name="loginbutton">Entrar</string>
+    <string name="notas">Notas</string>
+</resources>
