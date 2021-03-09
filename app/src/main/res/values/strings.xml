@@ -3,4 +3,10 @@
     <string name="welcome">Welcome to the app</string>
     <string name="loginbutton">Login</string>
     <string name="notas">Notes</string>
+    <string name="editbutton">Edit</string>
+    <string name="removebutton">Remove</string>
+    <string name="adicionarnota">Add note</string>
+    <string name="voltarnota">Back</string>
+    <string name="titulonota">My notes</string>
+    <string name="description">description</string>
 </resources>

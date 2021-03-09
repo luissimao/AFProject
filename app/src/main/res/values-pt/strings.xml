@@ -4,4 +4,10 @@
     <string name="welcome">Bem-vindo à app</string>
     <string name="loginbutton">Entrar</string>
     <string name="notas">Notas</string>
+    <string name="editbutton">Editar</string>
+    <string name="removebutton">Remover</string>
+    <string name="voltarnota">Voltar</string>
+    <string name="adicionarnota">Adicionar</string>
+    <string name="titulonota">As minhas notas</string>
+    <string name="description">descrição</string>
 </resources>
