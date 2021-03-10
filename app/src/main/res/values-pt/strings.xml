@@ -13,4 +13,6 @@
     <string name="submeternota">Submeter</string>
     <string name="descricaonota">Descrição da nota</string>
     <string name="tituloaddnota">Nota</string>
+    <string name="helpnote">Insira a descrição da nota aqui ..</string>
+    <string name="login">Por favor, introduza username e password</string>
 </resources>
