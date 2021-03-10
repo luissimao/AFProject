@@ -40,8 +40,7 @@
         android:layout_marginRight="30dp"
         android:layout_marginBottom="20dp"
         android:hint="@string/helpnote"
-        android:background="#E3E3E3"
-        android:text="" />
+        android:background="#E3E3E3" />
 
 
     <Button
