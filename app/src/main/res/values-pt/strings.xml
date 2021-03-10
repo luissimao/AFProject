@@ -10,4 +10,7 @@
     <string name="adicionarnota">Adicionar</string>
     <string name="titulonota">As minhas notas</string>
     <string name="description">descrição</string>
+    <string name="submeternota">Submeter</string>
+    <string name="descricaonota">Descrição da nota</string>
+    <string name="tituloaddnota">Nota</string>
 </resources>

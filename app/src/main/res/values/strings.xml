@@ -9,4 +9,7 @@
     <string name="voltarnota">Back</string>
     <string name="titulonota">My notes</string>
     <string name="description">description</string>
+    <string name="submeternota">Submit</string>
+    <string name="descricaonota">Note description</string>
+    <string name="tituloaddnota">Note</string>
 </resources>

@@ -3,6 +3,7 @@ package ipvc.estg.afproject
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity2 : AppCompatActivity() {
@@ -16,6 +17,11 @@ class MainActivity2 : AppCompatActivity() {
     fun voltarmenuprincipal(view: View) {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent);
+    }
+
+    fun addnote(view: View) {
+        val intent = Intent(this, MainActivity3::class.java)
+        startActivity(intent)
     }
 
 }
