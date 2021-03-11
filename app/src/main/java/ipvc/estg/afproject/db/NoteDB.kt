@@ -13,7 +13,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import java.time.chrono.HijrahChronology.INSTANCE
 
-@Database(entities = arrayOf(Note::class), version = 2, exportSchema = false)
+@Database(entities = arrayOf(Note::class), version = 1, exportSchema = false)
 public abstract class NoteDB : RoomDatabase() {
 
     abstract fun noteDao(): NoteDao
@@ -28,14 +28,14 @@ public abstract class NoteDB : RoomDatabase() {
                 scope.launch {
                     var noteDao = database.noteDao()
 
-                    noteDao.deleteAll()
-
-                    var note = Note(1, "Viana do Castelo")
-                    noteDao.insert(note)
-                    var note2 = Note(2, "Porto")
-                    noteDao.insert(note2)
-                    var note3 = Note(3, "Aveiro")
-                    noteDao.insert(note3)
+//                    noteDao.deleteAll()
+//
+//                    var note = Note(1, "Viana do Castelo")
+//                    noteDao.insert(note)
+//                    var note2 = Note(2, "Porto")
+//                    noteDao.insert(note2)
+//                    var note3 = Note(3, "Aveiro")
+//                    noteDao.insert(note3)
                 }
             }
         }
