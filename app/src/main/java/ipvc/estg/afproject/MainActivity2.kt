@@ -16,7 +16,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ipvc.estg.afproject.MainActivity3.Companion.EXTRA_REPLY_NOTE
 import ipvc.estg.afproject.adapters.NoteAdapter
-import ipvc.estg.afproject.dataclasses.Place
 import ipvc.estg.afproject.entities.Note
 import ipvc.estg.afproject.viewModel.NoteViewModel
 import kotlinx.android.synthetic.main.activity_main2.*

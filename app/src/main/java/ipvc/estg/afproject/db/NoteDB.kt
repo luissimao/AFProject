@@ -27,6 +27,15 @@ public abstract class NoteDB : RoomDatabase() {
             INSTANCE?.let { database ->
                 scope.launch {
                     var noteDao = database.noteDao()
+
+                    noteDao.deleteAll()
+
+                    var note = Note(1, "Viana do Castelo")
+                    noteDao.insert(note)
+                    var note2 = Note(2, "Porto")
+                    noteDao.insert(note2)
+                    var note3 = Note(3, "Aveiro")
+                    noteDao.insert(note3)
                 }
             }
         }
