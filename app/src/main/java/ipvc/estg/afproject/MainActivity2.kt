@@ -3,6 +3,7 @@ package ipvc.estg.afproject
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -64,8 +65,6 @@ class MainActivity2 : AppCompatActivity() {
                 Toast.LENGTH_LONG).show()
         }
     }
-
-
 
     fun voltarmenuprincipal(view: View) {
         val intent = Intent(this, MainActivity::class.java)

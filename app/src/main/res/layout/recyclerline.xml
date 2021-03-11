@@ -28,6 +28,7 @@
         android:padding="10dp"
         android:layout_height="wrap_content"
         android:text="@string/editbutton"
+        android:onClick="editarnota"
         app:backgroundTint="#F44336"/>
 
     <Button
