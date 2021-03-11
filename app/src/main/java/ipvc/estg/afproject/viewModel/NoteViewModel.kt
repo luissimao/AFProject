@@ -8,6 +8,7 @@ import ipvc.estg.afproject.db.NoteDB
 import ipvc.estg.afproject.db.NoteRepository
 import ipvc.estg.afproject.entities.Note
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class NoteViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -25,8 +26,8 @@ class NoteViewModel(application: Application) : AndroidViewModel(application) {
         repository.insert(note)
     }
 
-    fun deleteNote(note: Note) = viewModelScope.launch(Dispatchers.IO) {
-        repository.deleteNote(note)
-    }
+//    fun deleteNote(note: Note) = viewModelScope.launch(Dispatchers.IO) {
+//        repository.deleteNote(note)
+//    }
 
 }

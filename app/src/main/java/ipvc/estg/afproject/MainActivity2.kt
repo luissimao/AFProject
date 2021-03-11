@@ -9,14 +9,17 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ipvc.estg.afproject.MainActivity3.Companion.EXTRA_REPLY_NOTE
 import ipvc.estg.afproject.adapters.NoteAdapter
+import ipvc.estg.afproject.dataclasses.Place
 import ipvc.estg.afproject.entities.Note
 import ipvc.estg.afproject.viewModel.NoteViewModel
+import kotlinx.android.synthetic.main.activity_main2.*
 
 class MainActivity2 : AppCompatActivity() {
 
@@ -39,7 +42,7 @@ class MainActivity2 : AppCompatActivity() {
 
         val fab = findViewById<Button>(R.id.fab)
         fab.setOnClickListener {
-            val intent = Intent(this, MainActivity2::class.java)
+            val intent = Intent(this, MainActivity3::class.java)
             startActivityForResult(intent, newWordActivityRequestCode)
         }
     }
