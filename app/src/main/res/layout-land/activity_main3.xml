@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="@string/tituloaddnota"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/noteadddescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="30dp"
+        android:gravity="center"
+        android:text="@string/descricaonota"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/note"
+        android:gravity="top|start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/submitbuttonnote"
+        android:layout_below="@id/noteadddescription"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="5dp"
+        android:hint="@string/helpnote"
+        android:background="#E3E3E3" />
+
+
+    <Button
+        android:id="@+id/submitbuttonnote"
+        android:layout_width="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/submeternota"
+        app:backgroundTint="#F44336"></Button>
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/voltarnota"
+        android:onClick="voltarnotas"
+        app:backgroundTint="#F44336"></Button>
+
+</RelativeLayout>

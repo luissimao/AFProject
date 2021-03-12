@@ -7,11 +7,12 @@
 
     <TextView
         android:id="@+id/name"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
         android:textStyle="bold"
         android:text="@string/description"
+        android:textSize="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </TextView>
@@ -26,21 +27,18 @@
         android:id="@+id/editbutton"
         android:layout_width="0dp"
         android:layout_weight="1"
-        android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
-        android:padding="10dp"
+        android:layout_marginRight="10dp"
         android:layout_height="wrap_content"
         android:text="@string/editbutton"
-        android:onClick="editarnota"
         app:backgroundTint="#F44336"/>
 
     <Button
         android:id="@+id/removebutton"
         android:layout_width="0dp"
-        android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_weight="1"
-        android:padding="10dp"
         android:layout_height="wrap_content"
         android:text="@string/removebutton"
         app:backgroundTint="#F44336"/>
