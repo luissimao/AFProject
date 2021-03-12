@@ -27,7 +27,7 @@ class NoteAdapter internal constructor(
 
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
         val current = notes[position]
-        holder.noteItemView.text = current.note.toString() + " - " + current.note + "-" + current.note
+        holder.noteItemView.text = current.note.toString()
     }
 
     internal fun setNotes(notes: List<Note>) {
