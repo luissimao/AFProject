@@ -10,6 +10,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         android:text="@string/description"
         android:layout_width="match_parent"
@@ -31,7 +32,6 @@
         android:padding="10dp"
         android:layout_height="wrap_content"
         android:text="@string/editbutton"
-        android:onClick="editarnota"
         app:backgroundTint="#F44336"/>
 
     <Button
