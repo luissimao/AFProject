@@ -15,4 +15,5 @@
     <string name="helpnote">Insert the description of the note here ..</string>
     <string name="login">Please, insert username and password!!</string>
     <string name="empty_not_saved">Empty note.. Note not added..</string>
+    <string name="nota">Note</string>
 </resources>

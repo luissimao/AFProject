@@ -6,7 +6,14 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/notas_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:fontFamily="sans-serif-black"/>
+
+    <TextView
+        android:id="@+id/notas_viewholder_titulo"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
@@ -17,34 +24,16 @@
         android:layout_height="wrap_content">
     </TextView>
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/notas_viewholder_descricao"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="@string/description"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/name"
-        android:orientation="horizontal">
-
-    <Button
-        android:id="@+id/editbutton"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:padding="10dp"
-        android:layout_height="wrap_content"
-        android:text="@string/editbutton"
-        app:backgroundTint="#F44336"/>
-
-    <Button
-        android:id="@+id/removebutton"
-        android:layout_width="0dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_weight="1"
-        android:padding="10dp"
-        android:layout_height="wrap_content"
-        android:text="@string/removebutton"
-        app:backgroundTint="#F44336"/>
-
-    </LinearLayout>
+        android:layout_height="wrap_content">
+    </TextView>
 
 </RelativeLayout>

@@ -14,11 +14,8 @@ class MainActivity : AppCompatActivity() {
 
     fun button4(view: View) {
 
-        var edit1 = findViewById<EditText>(R.id.editTextTextPersonName2)
+        val intent = Intent(this, MainActivity2::class.java)
 
-        val intent = Intent(this, MainActivity2::class.java).apply {
-            putExtra("teste", edit1.text)
-        }
         startActivity(intent)
     }
 

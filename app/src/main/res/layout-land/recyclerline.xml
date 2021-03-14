@@ -17,32 +17,6 @@
         android:layout_height="wrap_content">
     </TextView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/name"
-        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/editbutton"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_height="wrap_content"
-        android:text="@string/editbutton"
-        app:backgroundTint="#F44336"/>
-
-    <Button
-        android:id="@+id/removebutton"
-        android:layout_width="0dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content"
-        android:text="@string/removebutton"
-        app:backgroundTint="#F44336"/>
-
-    </LinearLayout>
 
 </RelativeLayout>
