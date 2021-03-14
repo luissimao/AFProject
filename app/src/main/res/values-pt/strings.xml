@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AFProject</string>
+    <string name="app_name">Cidade Inteligente</string>
     <string name="welcome">Bem-vindo à app</string>
     <string name="loginbutton">Entrar</string>
     <string name="notas">Notas</string>
@@ -13,8 +13,9 @@
     <string name="submeternota">Submeter</string>
     <string name="descricaonota">Descrição da nota</string>
     <string name="tituloaddnota">Nota</string>
-    <string name="helpnote">Insira a descrição da nota aqui ..</string>
+    <string name="helpnote">Insira o titulo da nota aqui ..</string>
     <string name="login">Por favor, introduza username e password</string>
     <string name="empty_not_saved">Nota vazia.. Nota não adicionada..</string>
     <string name="nota">Nota</string>
+    <string name="helpnote2">Insira a descrição da nota aqui ..</string>
 </resources>

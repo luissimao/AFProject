@@ -19,4 +19,11 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun button5(view: View) {
+
+        val intent = Intent(this, MainActivity2::class.java)
+
+        startActivity(intent)
+    }
+
 }
