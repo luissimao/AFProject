@@ -26,8 +26,8 @@ class MainActivity3 : AppCompatActivity() {
 
         notaViewModel = ViewModelProvider(this).get(NotasViewModel::class.java)
 
-        if (intent.hasExtra(Constants.NOTA_ID)) {
-            notaId = intent.getLongExtra(Constants.NOTA_ID, 0L)
+        if (intent.hasExtra("nota_id")) {
+            notaId = intent.getLongExtra("nota_id", 0L)
 
             notaViewModel.get(notaId).observe(this, Observer {
 

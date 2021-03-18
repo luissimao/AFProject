@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import ipvc.estg.afproject.Constants
 import ipvc.estg.afproject.MainActivity3
 import ipvc.estg.afproject.R
 import ipvc.estg.afproject.entities.Nota
@@ -32,7 +31,7 @@ class NotaAdapter internal constructor(context: Context) :
             Log.d(TAG, "Setting onClickListener for item ${item.id}")
 
             val intent = Intent(v.context, MainActivity3::class.java).apply {
-                putExtra(Constants.NOTA_ID, item.id)
+                putExtra("nota_id", item.id)
             }
             v.context.startActivity(intent)
         }
