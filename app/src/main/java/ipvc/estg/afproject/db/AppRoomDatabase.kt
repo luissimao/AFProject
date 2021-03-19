@@ -30,7 +30,7 @@ abstract class AppRoomDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppRoomDatabase::class.java,
                     "notas_database"
-                ).fallbackToDestructiveMigration()          // TODO: migration
+                ).fallbackToDestructiveMigration()
                     .build()
                 INSTANCE = instance
                 return instance

@@ -56,7 +56,7 @@ class MainActivity3 : AppCompatActivity() {
                 Snackbar.make(view, "Empty data is not allowed", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
             }
-            if (descricao.isBlank() or descricao.isEmpty()) {
+            else if (descricao.isBlank() or descricao.isEmpty()) {
                 Snackbar.make(view, "Empty data is not allowed", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
             }
@@ -78,7 +78,7 @@ class MainActivity3 : AppCompatActivity() {
                 Snackbar.make(view, "Empty data is not allowed", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
             }
-            if (descricao.isBlank() or descricao.isEmpty()) {
+            else if (descricao.isBlank() or descricao.isEmpty()) {
                 Snackbar.make(view, "Empty data is not allowed", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
             }
