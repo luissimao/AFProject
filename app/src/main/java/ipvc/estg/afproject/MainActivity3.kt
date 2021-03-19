@@ -103,7 +103,6 @@ class MainActivity3 : AppCompatActivity() {
         if (isEdit) {
             btnSave.visibility = View.GONE
         } else {
-            /* No reason to Update or Delete a new Record yet to be saved */
             btnUpdate.visibility = View.GONE
             btnDelete.visibility = View.GONE
         }
