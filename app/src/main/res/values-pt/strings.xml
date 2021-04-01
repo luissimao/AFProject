@@ -18,4 +18,13 @@
     <string name="empty_not_saved">Nota vazia.. Nota não adicionada..</string>
     <string name="nota">Nota</string>
     <string name="helpnote2">Insira a descrição da nota aqui ..</string>
+    <string name="titulomapa">Mapa de ocorrências</string>
+    <string name="addocorrencia">Adicionar ocorrência</string>
+    <string name="logoutmapa">Logout</string>
+    <string name="occurrence">Ocorrência</string>
+    <string name="occurrencetitle">Título da ocorrência</string>
+    <string name="occurrencetitle2">Insira o título da nova ocorrência</string>
+    <string name="occurrencedescription">Descrição da ocorrência</string>
+    <string name="occurrencedescription2">Insira a descrição da nova ocorrência</string>
+    <string name="anexar">Anexar ficheiro</string>
 </resources>

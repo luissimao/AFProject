@@ -17,4 +17,13 @@
     <string name="empty_not_saved">Empty note.. Note not added..</string>
     <string name="nota">Note</string>
     <string name="helpnote2">Insert the description of the note here ..</string>
+    <string name="titulomapa">Occurrences Map</string>
+    <string name="addocorrencia">Add occurrence</string>
+    <string name="logoutmapa">Logout</string>
+    <string name="occurrence">Occurrence</string>
+    <string name="occurrencetitle">Occurrence title</string>
+    <string name="occurrencetitle2">Insert the title of the new occurrence</string>
+    <string name="occurrencedescription">Occurrence description</string>
+    <string name="occurrencedescription2">Insert the description of the new occurrence</string>
+    <string name="anexar">Add file</string>
 </resources>
