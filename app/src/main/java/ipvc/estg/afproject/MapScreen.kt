@@ -16,7 +16,7 @@ class MapScreen : AppCompatActivity() {
     fun addOccurrence(view: View) {
 
         val intent = Intent(this, AddOccurrence::class.java)
-
+        // do map
         startActivity(intent)
     }
 
