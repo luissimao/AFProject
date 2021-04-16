@@ -25,6 +25,5 @@ class AddOccurrence : AppCompatActivity() {
         toast.show()
     }
 
-    // teste developemntt
 
 }
