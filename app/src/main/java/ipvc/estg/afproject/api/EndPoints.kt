@@ -1,7 +1,5 @@
 package ipvc.estg.afproject.api;
 
-import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -17,8 +15,8 @@ interface EndPoints {
     @GET("/users/{id}")
     fun getUserById(@Path("id") id: Int): Call<Users>
 
-//    @FormUrlEncoded
-//    @POST("/posts")
-//    fun postTest(@Field("title") first: String?): Call<OutputPost>
+    @FormUrlEncoded
+    @POST("myslim/api/posts")
+    fun postTest(@Field("email") first: String?, @Field("password") second: String?): Call<List<Users>>
 
 }

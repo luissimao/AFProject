@@ -26,4 +26,9 @@
     <string name="occurrencedescription">Occurrence description</string>
     <string name="occurrencedescription2">Insert the description of the new occurrence</string>
     <string name="anexar">Add file</string>
+    <string name="login_p" translatable="false">login_p</string>
+    <string name="id" translatable="false">id</string>
+    <string name="login_shared" translatable="false">login_shared</string>
+    <string name="nome" translatable="false">nome</string>
+    <string name="errologin" translatable="false">Error in authentication..</string>
 </resources>

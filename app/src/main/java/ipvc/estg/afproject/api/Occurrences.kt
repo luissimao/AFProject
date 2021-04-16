@@ -10,9 +10,3 @@ data class Occurrences (
     val user_id: Int
 )
 
-data class Users (
-    val id: Int,
-    val name: String,
-    val email: String,
-    val password: String
-)
