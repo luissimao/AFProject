@@ -42,12 +42,12 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun buttonsemlogin(view: View) {
-
-        val intent = Intent(this, MapsActivity::class.java)
-
-        startActivity(intent)
-    }
+//    fun buttonsemn(view: View) {
+//
+//        val intent = Intent(this, MapsActivity::class.java)
+//
+//        startActivity(intent)
+//    }
 
     fun buttonMapa(view: View) {
 
@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
 
                     for(Users in response.body()!!){
 
-                        Log.d("TAG_", Users.email.toString() + Users.password.toString())
+                        Log.d("TAG_", Users.id.toString() )
 
                         val sharedPref: SharedPreferences = getSharedPreferences(
                                 getString(R.string.login_p), Context.MODE_PRIVATE
