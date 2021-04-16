@@ -69,7 +69,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         // Add a marker in Sydney and move the camera
         val sydney = LatLng(41.6873737, -8.8372531)
-        val zoomLevel = 16.0f;
+        val zoomLevel = 8f;
         mMap.addMarker(MarkerOptions().position(sydney).title("Center of Viana do Castelo"))
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, zoomLevel))
     }
