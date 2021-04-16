@@ -27,4 +27,6 @@
     <string name="occurrencedescription">Descrição da ocorrência</string>
     <string name="occurrencedescription2">Insira a descrição da nova ocorrência</string>
     <string name="anexar">Anexar ficheiro</string>
+    <string name="title_activity_maps">Mapa</string>
+    <string name="erromapa">Ocorreu um erro..</string>
 </resources>

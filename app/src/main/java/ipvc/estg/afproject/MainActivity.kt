@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         if (sharedPref != null){
             if(sharedPref.all[getString(R.string.login_shared)]==true){
-                var intent = Intent(this, MapScreen::class.java)
+                var intent = Intent(this, MapsActivity::class.java)
                 startActivity(intent)
             }
         }
@@ -42,9 +42,16 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun buttonsemlogin(view: View) {
+
+        val intent = Intent(this, MapsActivity::class.java)
+
+        startActivity(intent)
+    }
+
     fun buttonMapa(view: View) {
 
-       val intent = Intent(this, MapScreen::class.java)
+       val intent = Intent(this, MapsActivity::class.java)
 
         val email = findViewById<EditText>(R.id.username)
         val password = findViewById<EditText>(R.id.password)

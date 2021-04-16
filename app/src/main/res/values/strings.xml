@@ -31,4 +31,6 @@
     <string name="login_shared" translatable="false">login_shared</string>
     <string name="nome" translatable="false">nome</string>
     <string name="errologin" translatable="false">Error in authentication..</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="erromapa">Error showing map</string>
 </resources>
