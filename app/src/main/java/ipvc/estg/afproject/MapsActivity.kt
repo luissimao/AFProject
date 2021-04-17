@@ -40,14 +40,14 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val request = ServiceBuilder.buildService(EndPoints::class.java)
         val call = request.getAllOccurrences()
         var position: LatLng
-        var id: Any? = 0
+        var id: Int? = 0
 
         val sharedPref: SharedPreferences = getSharedPreferences(
             getString(R.string.login_p), Context.MODE_PRIVATE
         )
 
         if (sharedPref != null){
-                id = sharedPref.all[getString(R.string.id)]
+                id = sharedPref.all[getString(R.string.id)] as Int?
         }
 
         call.enqueue(object : Callback<List<Occurrences>> {
@@ -57,13 +57,17 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
                     occurrences = response.body()!!
 
-                    for(occurrences in occurrences){
-                        position = LatLng(occurrences.latitude, occurrences.longitude)
+                    for(occurrence in occurrences){
+                        position = LatLng(occurrence.latitude, occurrence.longitude)
 
-                        if(occurrences.user_id == id.toString().toInt()) {
-                            mMap.addMarker(MarkerOptions().position(position).title(occurrences.titulo + " - " + occurrences.descricao).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)))
+                        Log.d("occurrences.user_id", occurrence.user_id.toString());
+                        Log.d("_id", id.toString());
+
+                        if(occurrence.user_id == id) {
+
+                            mMap.addMarker(MarkerOptions().position(position).title(occurrence.titulo + " - " + occurrence.descricao).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)))
                         } else {
-                            mMap.addMarker(MarkerOptions().position(position).title(occurrences.titulo + " - " + occurrences.descricao).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)))
+                            mMap.addMarker(MarkerOptions().position(position).title(occurrence.titulo + " - " + occurrence.descricao).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)))
 
                         }
 

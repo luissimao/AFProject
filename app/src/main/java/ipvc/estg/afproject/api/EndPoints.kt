@@ -36,7 +36,7 @@ interface EndPoints {
 
     @FormUrlEncoded
     @POST("myslim/api/occurrences/insert")
-    fun insert(@Field("titulo") first: String?, @Field("descricao") second: String?, @Field("imagem") third: String?, @Field("latitude") fourth: Double?, @Field("longitude") fifth: Double?, @Field("user_id") sixth: Int?): Call<List<Occurrences>>
+    fun insert(@Field("titulo") titulo: String?, @Field("descricao") descricao: String?, @Field("imagem") imagem: String?, @Field("latitude") latitude: Double?, @Field("longitude") longitude: Double?, @Field("user_id") user_id: Int?): Call<Occurrences>
 
     @FormUrlEncoded
     @POST("myslim/api/occurrences/update/{id}")

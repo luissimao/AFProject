@@ -35,49 +35,44 @@ class AddOccurrence : AppCompatActivity() {
 
     fun submit(view: View) {
 
-        var id: Any? = 0
+        var id: Int? = 0
 
         val sharedPref: SharedPreferences = getSharedPreferences(
                 getString(R.string.login_p), Context.MODE_PRIVATE
         )
 
         if (sharedPref != null){
-            id = sharedPref.all[getString(R.string.id)]
+            id = sharedPref.all[getString(R.string.id)] as Int?
         }
 
         val titulo = findViewById<EditText>(R.id.occurrencetitle2)
         val descricao = findViewById<EditText>(R.id.occurrencedescription2)
         val imagem = 1
-        val user_id = 2
+        val userId = 2
         val latitude = 1
         val longitude = 1
 
         val request = ServiceBuilder.buildService(EndPoints::class.java)
+        val call = request.insert(titulo.text.toString(), descricao.text.toString(),imagem.toString(),latitude.toDouble(), longitude.toDouble(),userId)
 
-        if (titulo.toString() != null) {
+        call.enqueue(object : Callback<Occurrences> {
+            override fun onResponse(call: Call<Occurrences>?, response: Response<Occurrences>?) {
 
-            val call = request.insert(titulo.text.toString(), descricao.text.toString(), imagem.toString(), latitude.toDouble(), longitude.toDouble(), user_id.toString().toInt())
+                Log.d("response_body", response!!.body()!!.toString());
+                if (response!!.isSuccessful){
 
-            call.enqueue(object : Callback<List<Occurrences>> {
-                override fun onResponse(call: Call<List<Occurrences>>, response: Response<List<Occurrences>>) {
+                    Log.d("erro", response.toString() + "EROROROROROROR");
 
-                    if (response.isSuccessful){
+                    val toast = Toast.makeText(applicationContext, "Inserido com sucesso..", Toast.LENGTH_SHORT)
+                    toast.show()
 
-                        Log.d("erro", response.toString() + "EROROROROROROR");
-
-                        val toast = Toast.makeText(applicationContext, "Inserido com sucesso..", Toast.LENGTH_SHORT)
-                        toast.show()
-
-                    }
                 }
-                override fun onFailure(call: Call<List<Occurrences>>, t: Throwable) {
-                    Toast.makeText(applicationContext, "Ocorrência inserida com sucesso", Toast.LENGTH_SHORT).show()
-                }
-            })
-        } else {
-            Toast.makeText(applicationContext, "Titulo não pode ser nulo", Toast.LENGTH_SHORT).show()
-        }
-
+            }
+            override fun onFailure(call: Call<Occurrences>?, t: Throwable?) {
+                Toast.makeText(applicationContext, t!!.message, Toast.LENGTH_SHORT).show()
+                Log.e("error", t!!.message.toString())
+            }
+        })
     }
 
 
