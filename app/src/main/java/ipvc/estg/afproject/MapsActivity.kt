@@ -42,8 +42,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         var position: LatLng
         var id: Any? = 0
 
-        Log.d("TAG_", call.toString() + "AQUIIIIIIIIIIIIIIIII")
-
         val sharedPref: SharedPreferences = getSharedPreferences(
             getString(R.string.login_p), Context.MODE_PRIVATE
         )
@@ -57,16 +55,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
                 if (response.isSuccessful){
 
-                    Log.d("TAG_", response.toString() + "AQUIIIIIIIIIIIIIIIII")
-
                     occurrences = response.body()!!
 
                     for(occurrences in occurrences){
                         position = LatLng(occurrences.latitude, occurrences.longitude)
-
-                        Log.d("TAG_", occurrences.user_id.toString() + "AQUIIIIIIIIIIIIIIIII")
-
-                        Log.d("TAG_", id.toString() + "AQUIIIIIIIIIIIIIIIII")
 
                         if(occurrences.user_id == id.toString().toInt()) {
                             mMap.addMarker(MarkerOptions().position(position).title(occurrences.titulo + " - " + occurrences.descricao).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)))

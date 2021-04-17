@@ -52,7 +52,7 @@
         android:textSize="20dp" />
 
     <EditText
-        android:id="@+id/occurencedescription2"
+        android:id="@+id/occurrencedescription2"
         android:gravity="top|start"
         android:layout_width="match_parent"
         android:layout_height="155dp"
@@ -71,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:layout_below="@id/occurencedescription2"
+        android:layout_below="@id/occurrencedescription2"
         android:gravity="center"
         android:text="@string/anexar"
         android:textSize="20dp" />

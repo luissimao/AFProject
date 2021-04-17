@@ -66,8 +66,6 @@ class MainActivity : AppCompatActivity() {
 
                     for(Users in response.body()!!){
 
-                        Log.d("TAG_", Users.id.toString() )
-
                         val sharedPref: SharedPreferences = getSharedPreferences(
                                 getString(R.string.login_p), Context.MODE_PRIVATE
                         )
