@@ -42,12 +42,12 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-//    fun buttonsemn(view: View) {
-//
-//        val intent = Intent(this, MapsActivity::class.java)
-//
-//        startActivity(intent)
-//    }
+    fun buttonteste(view: View) {
+
+        val intent = Intent(this, MapsActivity::class.java)
+
+        startActivity(intent)
+    }
 
     fun buttonMapa(view: View) {
 
