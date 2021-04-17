@@ -11,10 +11,12 @@ import android.widget.EditText
 import android.widget.Toast
 import android.widget.Toast.makeText
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
 import ipvc.estg.afproject.api.EndPoints
 import ipvc.estg.afproject.api.Occurrences
 import ipvc.estg.afproject.api.ServiceBuilder
 import ipvc.estg.afproject.api.Users
+import ipvc.estg.afproject.entities.Nota
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -35,8 +37,6 @@ class AddOccurrence : AppCompatActivity() {
 
         var id: Any? = 0
 
-        val intent = Intent(this, MapsActivity::class.java)
-
         val sharedPref: SharedPreferences = getSharedPreferences(
                 getString(R.string.login_p), Context.MODE_PRIVATE
         )
@@ -53,27 +53,30 @@ class AddOccurrence : AppCompatActivity() {
         val longitude = 1
 
         val request = ServiceBuilder.buildService(EndPoints::class.java)
-        val call = request.insert(titulo.text.toString(), descricao.text.toString(), imagem.toString(), latitude.toDouble(), longitude.toDouble(), user_id.toString().toInt())
 
-        Log.d("erro1", call.toString() + "EROROROROROROR");
+        if (titulo.toString() != null) {
 
-        call.enqueue(object : Callback<List<Occurrences>> {
-            override fun onResponse(call: Call<List<Occurrences>>, response: Response<List<Occurrences>>) {
+            val call = request.insert(titulo.text.toString(), descricao.text.toString(), imagem.toString(), latitude.toDouble(), longitude.toDouble(), user_id.toString().toInt())
 
-                if (response.isSuccessful){
+            call.enqueue(object : Callback<List<Occurrences>> {
+                override fun onResponse(call: Call<List<Occurrences>>, response: Response<List<Occurrences>>) {
 
-                    Log.d("erro", response.toString() + "EROROROROROROR");
+                    if (response.isSuccessful){
 
-                    val toast = Toast.makeText(applicationContext, "Inserido com sucesso..", Toast.LENGTH_SHORT)
-                    toast.show()
+                        Log.d("erro", response.toString() + "EROROROROROROR");
 
+                        val toast = Toast.makeText(applicationContext, "Inserido com sucesso..", Toast.LENGTH_SHORT)
+                        toast.show()
+
+                    }
                 }
-            }
-
-            override fun onFailure(call: Call<List<Occurrences>>, t: Throwable) {
-                Toast.makeText(applicationContext, "Ocorrência inserida com sucesso", Toast.LENGTH_SHORT).show()
-            }
-        })
+                override fun onFailure(call: Call<List<Occurrences>>, t: Throwable) {
+                    Toast.makeText(applicationContext, "Ocorrência inserida com sucesso", Toast.LENGTH_SHORT).show()
+                }
+            })
+        } else {
+            Toast.makeText(applicationContext, "Titulo não pode ser nulo", Toast.LENGTH_SHORT).show()
+        }
 
     }
 
