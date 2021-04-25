@@ -37,17 +37,28 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
+    }
+
+    override fun onMapReady(googleMap: GoogleMap) {
+        mMap = googleMap
+
+        // Add a marker in Sydney and move the camera
+        val sydney = LatLng(41.6873737, -8.8372531)
+        val zoomLevel = 8f;
+        mMap.addMarker(MarkerOptions().position(sydney).title("Center of Viana do Castelo"))
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, zoomLevel))
+
         val request = ServiceBuilder.buildService(EndPoints::class.java)
         val call = request.getAllOccurrences()
         var position: LatLng
         var id: Int? = 0
 
         val sharedPref: SharedPreferences = getSharedPreferences(
-            getString(R.string.login_p), Context.MODE_PRIVATE
+                getString(R.string.login_p), Context.MODE_PRIVATE
         )
 
         if (sharedPref != null){
-                id = sharedPref.all[getString(R.string.id)] as Int?
+            id = sharedPref.all[getString(R.string.id)] as Int?
         }
 
         call.enqueue(object : Callback<List<Occurrences>> {
@@ -79,16 +90,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 Toast.makeText(this@MapsActivity, getString(R.string.erromapa), Toast.LENGTH_SHORT).show()
             }
         })
-    }
 
-    override fun onMapReady(googleMap: GoogleMap) {
-        mMap = googleMap
-
-        // Add a marker in Sydney and move the camera
-        val sydney = LatLng(41.6873737, -8.8372531)
-        val zoomLevel = 8f;
-        mMap.addMarker(MarkerOptions().position(sydney).title("Center of Viana do Castelo"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, zoomLevel))
     }
 
     fun addOccurrence(view: View) {
