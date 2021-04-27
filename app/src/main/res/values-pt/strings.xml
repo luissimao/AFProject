@@ -38,4 +38,11 @@
     <string name="filtro7">Remover todos os filtros</string>
     <string name="coord">Coordenadas com sucesso</string>
     <string name="sucesso">Inserido com sucesso</string>
+    <string name="defaulttt">Default</string>
+    <string name="quinze">15 KM</string>
+    <string name="trinta">35 KM</string>
+    <string name="acidente">Acidente</string>
+    <string name="holes">Buracos</string>
+    <string name="sess">65 KM</string>
+    <string name="others">Outros</string>
 </resources>

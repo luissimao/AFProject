@@ -42,4 +42,11 @@
     <string name="filtro7">Remove filters</string>
     <string name="coord">Coordinates successful..</string>
     <string name="sucesso">Insert with success</string>
+    <string name="defaulttt">Default</string>
+    <string name="quinze">15 KM</string>
+    <string name="trinta">35 KM</string>
+    <string name="acidente">Accident</string>
+    <string name="holes">Holes</string>
+    <string name="sess">65 KM</string>
+    <string name="others">Others</string>
 </resources>

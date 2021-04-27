@@ -12,7 +12,7 @@ tools:context=".MapsActivity">
         android:layout_marginLeft="20dp"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="Default"
+        android:text="@string/defaulttt"
         android:onClick="filtro7"
         app:backgroundTint="#F44336" />
 
@@ -47,7 +47,7 @@ tools:context=".MapsActivity">
         android:layout_height="wrap_content"
         android:layout_marginBottom="120dp"
         android:layout_alignParentBottom="true"
-        android:text="15km"
+        android:text="@string/quinze"
         android:onClick="filtro15km"
         app:backgroundTint="#F44336" />
 
@@ -58,7 +58,7 @@ tools:context=".MapsActivity">
         android:layout_height="wrap_content"
         android:layout_marginBottom="170dp"
         android:layout_alignParentBottom="true"
-        android:text="acidente"
+        android:text="@string/acidente"
         android:onClick="filtro4"
         app:backgroundTint="#F44336" />
 
@@ -69,7 +69,7 @@ tools:context=".MapsActivity">
         android:layout_height="wrap_content"
         android:layout_marginBottom="120dp"
         android:layout_alignParentBottom="true"
-        android:text="35km"
+        android:text="@string/trinta"
         android:onClick="filtro35km"
         app:backgroundTint="#F44336" />
 
@@ -80,7 +80,7 @@ tools:context=".MapsActivity">
         android:layout_height="wrap_content"
         android:layout_marginBottom="170dp"
         android:layout_alignParentBottom="true"
-        android:text="buracos"
+        android:text="@string/holes"
         android:onClick="filtro5"
         app:backgroundTint="#F44336" />
 
@@ -91,7 +91,7 @@ tools:context=".MapsActivity">
         android:layout_height="wrap_content"
         android:layout_marginBottom="120dp"
         android:layout_alignParentBottom="true"
-        android:text="65km"
+        android:text="@string/sess"
         android:onClick="filtro65k"
         app:backgroundTint="#F44336" />
 
@@ -102,7 +102,7 @@ tools:context=".MapsActivity">
         android:layout_height="wrap_content"
         android:layout_marginBottom="170dp"
         android:layout_alignParentBottom="true"
-        android:text="Outros"
+        android:text="@string/others"
         android:onClick="filtro6"
         app:backgroundTint="#F44336" />
 
