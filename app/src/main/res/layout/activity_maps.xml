@@ -6,6 +6,17 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context=".MapsActivity">
 
+    <Button
+        android:id="@+id/filtro7"
+        android:layout_width="110dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Default"
+        android:onClick="filtro7"
+        app:backgroundTint="#F44336" />
+
+
 <TextView
     android:id="@+id/titlemap"
     android:layout_width="wrap_content"
@@ -28,6 +39,72 @@ tools:context=".MapsActivity">
     android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"/>
+
+    <Button
+        android:id="@+id/filtro1"
+        android:layout_width="110dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:layout_alignParentBottom="true"
+        android:text="15km"
+        android:onClick="filtro1"
+        app:backgroundTint="#F44336" />
+
+    <Button
+        android:id="@+id/filtro4"
+        android:layout_width="110dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="170dp"
+        android:layout_alignParentBottom="true"
+        android:text="acidente"
+        android:onClick="filtro4"
+        app:backgroundTint="#F44336" />
+
+    <Button
+        android:id="@+id/filtro2"
+        android:layout_width="110dp"
+        android:layout_marginLeft="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:layout_alignParentBottom="true"
+        android:text="500m"
+        android:onClick="filtro2"
+        app:backgroundTint="#F44336" />
+
+    <Button
+        android:id="@+id/filtro5"
+        android:layout_width="110dp"
+        android:layout_marginLeft="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="170dp"
+        android:layout_alignParentBottom="true"
+        android:text="buracos"
+        android:onClick="filtro5"
+        app:backgroundTint="#F44336" />
+
+    <Button
+        android:id="@+id/filtro3"
+        android:layout_width="110dp"
+        android:layout_marginLeft="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:layout_alignParentBottom="true"
+        android:text="1000m"
+        android:onClick="filtro3"
+        app:backgroundTint="#F44336" />
+
+    <Button
+        android:id="@+id/filtro6"
+        android:layout_width="110dp"
+        android:layout_marginLeft="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="170dp"
+        android:layout_alignParentBottom="true"
+        android:text="Outros"
+        android:onClick="filtro6"
+        app:backgroundTint="#F44336" />
 
 <Button
     android:id="@+id/addocorrenciao"
