@@ -48,7 +48,7 @@ tools:context=".MapsActivity">
         android:layout_marginBottom="120dp"
         android:layout_alignParentBottom="true"
         android:text="15km"
-        android:onClick="filtro1"
+        android:onClick="filtro15km"
         app:backgroundTint="#F44336" />
 
     <Button
@@ -63,14 +63,14 @@ tools:context=".MapsActivity">
         app:backgroundTint="#F44336" />
 
     <Button
-        android:id="@+id/filtro2"
+        android:id="@+id/filtro35km"
         android:layout_width="110dp"
         android:layout_marginLeft="150dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="120dp"
         android:layout_alignParentBottom="true"
-        android:text="500m"
-        android:onClick="filtro2"
+        android:text="35km"
+        android:onClick="filtro35km"
         app:backgroundTint="#F44336" />
 
     <Button
@@ -85,14 +85,14 @@ tools:context=".MapsActivity">
         app:backgroundTint="#F44336" />
 
     <Button
-        android:id="@+id/filtro3"
+        android:id="@+id/filtro65km"
         android:layout_width="110dp"
         android:layout_marginLeft="290dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="120dp"
         android:layout_alignParentBottom="true"
-        android:text="1000m"
-        android:onClick="filtro3"
+        android:text="65km"
+        android:onClick="filtro65k"
         app:backgroundTint="#F44336" />
 
     <Button
