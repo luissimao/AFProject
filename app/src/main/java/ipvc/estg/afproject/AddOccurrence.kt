@@ -61,7 +61,7 @@ class AddOccurrence : AppCompatActivity() {
             fusedLocationClient.lastLocation.addOnSuccessListener(this) { location ->
                 if (location != null) {
                     lastLocation = location
-                    Toast.makeText(this@AddOccurrence, "entrou e tem latlng", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@AddOccurrence, R.string.coord, Toast.LENGTH_SHORT).show()
                     val currentLatLng = LatLng(location.latitude, location.longitude)
 
                     var id: Int? = 0
@@ -93,7 +93,7 @@ class AddOccurrence : AppCompatActivity() {
 
                                 Log.d("erro", response.toString() + "EROROROROROROR");
 
-                                val toast = Toast.makeText(applicationContext, "Inserido com sucesso..", Toast.LENGTH_SHORT)
+                                val toast = Toast.makeText(applicationContext, R.string.sucesso, Toast.LENGTH_SHORT)
                                 toast.show()
 
                             }

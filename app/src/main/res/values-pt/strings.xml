@@ -29,4 +29,13 @@
     <string name="anexar">Anexar ficheiro</string>
     <string name="title_activity_maps">Mapa</string>
     <string name="erromapa">Ocorreu um erro..</string>
+    <string name="filtro15km">Filtro de 15 km</string>
+    <string name="filtro35km">Filtro de 35 km</string>
+    <string name="filtro65km">Filtro de 65 km</string>
+    <string name="filtro4">Filtro por acidentes</string>
+    <string name="filtro5">Filtro por buracos</string>
+    <string name="filtro6">Filtro por outros</string>
+    <string name="filtro7">Remover todos os filtros</string>
+    <string name="coord">Coordenadas com sucesso</string>
+    <string name="sucesso">Inserido com sucesso</string>
 </resources>

@@ -81,11 +81,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     for (occurrence in occurrences) {
                         position = LatLng(occurrence.latitude, occurrence.longitude)
 
-                        Log.d("occurrences.user_id", occurrence.user_id.toString());
-                        Log.d("_id", id.toString());
-
                         if (occurrence.user_id == id) {
-
                             mMap.addMarker(MarkerOptions().position(position).title(occurrence.titulo + " - " + occurrence.descricao).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)))
                         } else {
                             mMap.addMarker(MarkerOptions().position(position).title(occurrence.titulo + " - " + occurrence.descricao).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)))
@@ -118,7 +114,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     fun filtro15km(view: View) {
 
-        Toast.makeText(applicationContext, "50m", Toast.LENGTH_SHORT).show()
+        Toast.makeText(applicationContext, R.string.filtro15km, Toast.LENGTH_SHORT).show()
 
         if (ActivityCompat.checkSelfPermission(this,
                         android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -132,7 +128,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             fusedLocationClient.lastLocation.addOnSuccessListener(this) { location ->
                 if (location != null) {
                     lastLocation = location
-
 
                     mMap.clear()
 
@@ -165,13 +160,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                                 for (occurrence in occurrences) {
                                     position = LatLng(occurrence.latitude, occurrence.longitude)
 
-                                    Log.d("occurrences.user_id", occurrence.user_id.toString());
-                                    Log.d("_id", id.toString());
-
-
-
                                     if (calculateDistance(41.6873737, -8.8372531, occurrence.latitude, occurrence.longitude) < 15000) {
-
                                         mMap.addMarker(MarkerOptions().position(position).title(occurrence.titulo + " - " + occurrence.descricao).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)))
                                     } else {
                                         mMap.addMarker(MarkerOptions().position(position).title(occurrence.titulo + " - " + occurrence.descricao).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE)))
@@ -194,7 +183,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     fun filtro35km(view: View) {
 
-        Toast.makeText(applicationContext, "50m", Toast.LENGTH_SHORT).show()
+        Toast.makeText(applicationContext, R.string.filtro35km, Toast.LENGTH_SHORT).show()
 
         if (ActivityCompat.checkSelfPermission(this,
                         android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -208,7 +197,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             fusedLocationClient.lastLocation.addOnSuccessListener(this) { location ->
                 if (location != null) {
                     lastLocation = location
-
 
                     mMap.clear()
 
@@ -241,13 +229,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                                 for (occurrence in occurrences) {
                                     position = LatLng(occurrence.latitude, occurrence.longitude)
 
-                                    Log.d("occurrences.user_id", occurrence.user_id.toString());
-                                    Log.d("_id", id.toString());
-
-
-
                                     if (calculateDistance(41.6873737, -8.8372531, occurrence.latitude, occurrence.longitude) < 35000) {
-
                                         mMap.addMarker(MarkerOptions().position(position).title(occurrence.titulo + " - " + occurrence.descricao).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)))
                                     } else {
                                         mMap.addMarker(MarkerOptions().position(position).title(occurrence.titulo + " - " + occurrence.descricao).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE)))
@@ -270,7 +252,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     fun filtro65k(view: View) {
 
-        Toast.makeText(applicationContext, "50m", Toast.LENGTH_SHORT).show()
+        Toast.makeText(applicationContext, R.string.filtro65km, Toast.LENGTH_SHORT).show()
 
         if (ActivityCompat.checkSelfPermission(this,
                         android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -284,7 +266,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             fusedLocationClient.lastLocation.addOnSuccessListener(this) { location ->
                 if (location != null) {
                     lastLocation = location
-
 
                     mMap.clear()
 
@@ -317,13 +298,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                                 for (occurrence in occurrences) {
                                     position = LatLng(occurrence.latitude, occurrence.longitude)
 
-                                    Log.d("occurrences.user_id", occurrence.user_id.toString());
-                                    Log.d("_id", id.toString());
-
-
-
                                     if (calculateDistance(41.6873737, -8.8372531, occurrence.latitude, occurrence.longitude) < 65000) {
-
                                         mMap.addMarker(MarkerOptions().position(position).title(occurrence.titulo + " - " + occurrence.descricao).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)))
                                     } else {
                                         mMap.addMarker(MarkerOptions().position(position).title(occurrence.titulo + " - " + occurrence.descricao).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE)))
@@ -346,7 +321,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     fun filtro4(view: View) {
 
-        Toast.makeText(applicationContext, "1000m", Toast.LENGTH_SHORT).show()
+        Toast.makeText(applicationContext, R.string.filtro4, Toast.LENGTH_SHORT).show()
 
         mMap.clear()
 
@@ -379,11 +354,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     for (occurrence in occurrences) {
                         position = LatLng(occurrence.latitude, occurrence.longitude)
 
-                        Log.d("occurrences.user_id", occurrence.user_id.toString());
-                        Log.d("_id", id.toString());
-
                         if (occurrence.user_id == id) {
-
                             mMap.addMarker(MarkerOptions().position(position).title(occurrence.titulo + " - " + occurrence.descricao).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)))
                         } else {
                             mMap.addMarker(MarkerOptions().position(position).title(occurrence.titulo + " - " + occurrence.descricao).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)))
@@ -404,7 +375,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     fun filtro5(view: View) {
 
-                    Toast.makeText(applicationContext, "1000m", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext, R.string.filtro5, Toast.LENGTH_SHORT).show()
 
                     mMap.clear()
 
@@ -437,11 +408,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                                 for (occurrence in occurrences) {
                                     position = LatLng(occurrence.latitude, occurrence.longitude)
 
-                                    Log.d("occurrences.user_id", occurrence.user_id.toString());
-                                    Log.d("_id", id.toString());
-
                                     if (occurrence.user_id == id) {
-
                                         mMap.addMarker(MarkerOptions().position(position).title(occurrence.titulo + " - " + occurrence.descricao).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)))
                                     } else {
                                         mMap.addMarker(MarkerOptions().position(position).title(occurrence.titulo + " - " + occurrence.descricao).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)))
@@ -461,7 +428,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
                 fun filtro6(view: View) {
 
-                    Toast.makeText(applicationContext, "1000m", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext, R.string.filtro6, Toast.LENGTH_SHORT).show()
 
                     mMap.clear()
 
@@ -518,7 +485,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
                 fun filtro7(view: View) {
 
-                    Toast.makeText(applicationContext, "1000m", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext, R.string.filtro7, Toast.LENGTH_SHORT).show()
 
                     mMap.clear()
 
@@ -551,11 +518,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                                 for (occurrence in occurrences) {
                                     position = LatLng(occurrence.latitude, occurrence.longitude)
 
-                                    Log.d("occurrences.user_id", occurrence.user_id.toString());
-                                    Log.d("_id", id.toString());
-
                                     if (occurrence.user_id == id) {
-
                                         mMap.addMarker(MarkerOptions().position(position).title(occurrence.titulo + " - " + occurrence.descricao).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)))
                                     } else {
                                         mMap.addMarker(MarkerOptions().position(position).title(occurrence.titulo + " - " + occurrence.descricao).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)))

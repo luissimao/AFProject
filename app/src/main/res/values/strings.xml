@@ -33,4 +33,13 @@
     <string name="errologin" translatable="false">Error in authentication..</string>
     <string name="title_activity_maps">Map</string>
     <string name="erromapa">Error showing map</string>
+    <string name="filtro15km">Filter of 15 km</string>
+    <string name="filtro35km">Filter of 35 km</string>
+    <string name="filtro65km">Filter of 65 km</string>
+    <string name="filtro4">Filter by accidents</string>
+    <string name="filtro5">Filter by holes</string>
+    <string name="filtro6">Filter by others</string>
+    <string name="filtro7">Remove filters</string>
+    <string name="coord">Coordinates successful..</string>
+    <string name="sucesso">Insert with success</string>
 </resources>
