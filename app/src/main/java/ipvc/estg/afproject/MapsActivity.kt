@@ -104,7 +104,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         Location.distanceBetween(lat1, lng1, lat2, lng2, results)
         return results[0]
     }
-
+// teste filtros branch
     fun addOccurrence(view: View) {
 
         val intent = Intent(this, AddOccurrence::class.java)
