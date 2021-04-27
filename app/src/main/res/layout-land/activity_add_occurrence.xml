@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddOccurrence">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="@string/occurrence"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/occurrencetitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="@string/occurrencetitle"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/occurrencetitle2"
+        android:gravity="top|start"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/occurrencetitle"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="10dp"
+        android:hint="@string/occurrencetitle2"
+        android:background="#E3E3E3" />
+
+    <TextView
+        android:id="@+id/occurrencedescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/occurrencetitle2"
+        android:gravity="center"
+        android:text="@string/occurrencedescription"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/occurrencedescription2"
+        android:gravity="top|start"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/occurrencedescription"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="10dp"
+        android:hint="@string/occurrencedescription2"
+        android:background="#E3E3E3" />
+
+    <TextView
+        android:id="@+id/anexar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/occurrencedescription2"
+        android:gravity="center"
+        android:text="@string/anexar"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/submitoccurrence"
+        android:layout_width="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:onClick="submit"
+        android:layout_alignParentBottom="true"
+        android:text="@string/submeternota"
+        app:backgroundTint="#F44336" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="back"
+        android:text="@string/voltarnota"
+        app:backgroundTint="#F44336" />
+
+</RelativeLayout>

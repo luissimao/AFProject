@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MapsActivity">
+
+    <Button
+        android:id="@+id/filtro7"
+        android:layout_width="110dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/defaulttt"
+        android:onClick="filtro7"
+        app:backgroundTint="#F44336" />
+
+
+<TextView
+    android:id="@+id/titlemap"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="15dp"
+    android:gravity="center"
+    android:textStyle="bold"
+    android:text="@string/titulomapa"
+    android:textSize="20dp" />
+
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:layout_marginTop="55dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+
+    <Button
+        android:id="@+id/filtro1"
+        android:layout_width="110dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/quinze"
+        android:onClick="filtro15km"
+        app:backgroundTint="#F44336" />
+
+    <Button
+        android:id="@+id/filtro4"
+        android:layout_width="110dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/acidente"
+        android:onClick="filtro4"
+        app:backgroundTint="#F44336" />
+
+    <Button
+        android:id="@+id/filtro35km"
+        android:layout_width="110dp"
+        android:layout_marginLeft="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/trinta"
+        android:onClick="filtro35km"
+        app:backgroundTint="#F44336" />
+
+    <Button
+        android:id="@+id/filtro5"
+        android:layout_width="110dp"
+        android:layout_marginLeft="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/holes"
+        android:onClick="filtro5"
+        app:backgroundTint="#F44336" />
+
+    <Button
+        android:id="@+id/filtro65km"
+        android:layout_width="110dp"
+        android:layout_marginLeft="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/sess"
+        android:onClick="filtro65k"
+        app:backgroundTint="#F44336" />
+
+    <Button
+        android:id="@+id/filtro6"
+        android:layout_width="110dp"
+        android:layout_marginLeft="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/others"
+        android:onClick="filtro6"
+        app:backgroundTint="#F44336" />
+
+<Button
+    android:id="@+id/addocorrenciao"
+    android:layout_width="200dp"
+    android:layout_centerHorizontal="true"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="20dp"
+    android:text="@string/addocorrencia"
+    android:onClick="addOccurrence"
+    app:backgroundTint="#F44336" />
+
+<Button
+    android:id="@+id/logoutbutton"
+    android:layout_width="120dp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginRight="20dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:onClick="logout"
+    android:text="@string/logoutmapa"
+    app:backgroundTint="#F44336" />
+
+</RelativeLayout>
