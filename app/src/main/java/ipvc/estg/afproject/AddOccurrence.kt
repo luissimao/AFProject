@@ -47,6 +47,8 @@ class AddOccurrence : AppCompatActivity() {
         startActivity(intent)
     }
 
+    // correçao login e ultimos retoques
+
     fun submit(view: View) {
 
         if (ActivityCompat.checkSelfPermission(this,
