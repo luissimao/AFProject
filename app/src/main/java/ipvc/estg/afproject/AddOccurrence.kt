@@ -80,7 +80,7 @@ class AddOccurrence : AppCompatActivity() {
                     val titulo = findViewById<EditText>(R.id.occurrencetitle2)
                     val descricao = findViewById<EditText>(R.id.occurrencedescription2)
                     val imagem = 1
-                    val userId = 1
+                    val userId = id
                     val latitude = lastLocation.latitude
                     val longitude = lastLocation.longitude
 
