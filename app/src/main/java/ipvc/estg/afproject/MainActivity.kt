@@ -3,16 +3,19 @@ package ipvc.estg.afproject
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.Color
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatDelegate
 import com.mikhaellopez.circularprogressbar.CircularProgressBar
 import ipvc.estg.afproject.api.EndPoints
@@ -29,10 +32,14 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     private var brightness: Sensor? = null
     private lateinit var text: TextView
     private lateinit var pb: CircularProgressBar
+    private lateinit var square: TextView
 
+    @RequiresApi(Build.VERSION_CODES.KITKAT)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        square = findViewById(R.id.tv_square)
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
@@ -40,6 +47,8 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         pb = findViewById(R.id.circularProgressBar)
 
         setUpSensorStuff()
+
+        setUpSensorStuff2()
 
         val sharedPref: SharedPreferences = getSharedPreferences(
             getString(R.string.login_p), Context.MODE_PRIVATE
@@ -112,6 +121,20 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         brightness = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)
     }
 
+    @RequiresApi(Build.VERSION_CODES.KITKAT)
+    fun setUpSensorStuff2() {
+        sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
+
+        sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)?.also { accelerometer ->
+            sensorManager.registerListener(
+                    this,
+                    accelerometer,
+                    SensorManager.SENSOR_DELAY_FASTEST,
+                    SensorManager.SENSOR_DELAY_FASTEST
+            )
+        }
+    }
+
     override fun onSensorChanged(event: SensorEvent?) {
         if (event?.sensor?.type == Sensor.TYPE_LIGHT) {
             val light1 = event.values[0]
@@ -119,6 +142,29 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
             text.text = "Sensor: $light1\n${brightness(light1)}"
             pb.setProgressWithAnimation(light1)
         }
+
+        // if segundo sensor
+
+        if (event?.sensor?.type == Sensor.TYPE_ACCELEROMETER) {
+
+            val sides = event.values[0]
+
+            val upDown = event.values[1]
+
+            square.apply {
+                rotationX = upDown * 3f
+                rotationY = sides * 3f
+                rotation = -sides
+                translationX = sides * -10
+                translationY = upDown * 10
+            }
+
+            val color = if (upDown.toInt() == 0 && sides.toInt() == 0) Color.BLUE else Color.GREEN
+            square.setBackgroundColor(color)
+
+            square.text = "Cima/Baixo ${upDown.toInt()}\nEsquerda/Direita ${sides.toInt()}"
+        }
+
     }
 
     private fun brightness(brightness: Float): String {
