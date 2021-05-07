@@ -95,5 +95,53 @@
         android:onClick="buttonMapa"
         app:backgroundTint="#F44336" />
 
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/circularProgressBar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:cpb_background_progressbar_color="#b6bbd8"
+            app:cpb_background_progressbar_width="5dp"
+            app:cpb_progress_direction="to_right"
+            app:cpb_progressbar_color="#42A5F5"
+            android:layout_marginRight="35dp"
+            app:cpb_progressbar_width="10dp"
+            app:cpb_round_border="true"
+            app:cpb_progress_max="25000"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Hello World!"
+            android:textSize="20sp"
+            android:layout_marginRight="50dp"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/tv_square"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:background="#EF5350"
+            android:gravity="center"
+            android:text="Hello"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
 
 </LinearLayout>
